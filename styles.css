@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #A6C1E6;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 20px;
+    background-image: url(images/background-mage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.form-header {
+    display: flex;
+    width: fit-content;
+    border: 1px solid #A6C1E6;
+    padding: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #A6C1E6;
+    box-shadow: 1px 2px #c8e3ff;
+    opacity: 0.8;
+}
+
+.form-header .form-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.form-header .form-title-sub-title-basic-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #122138;
+    opacity: 1;
+}
+
+#basic-info {
+    font-size: 15px;
+    margin-top: 3px;
+    opacity: 1;
+}
+
+.order-form {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    border: 1px solid #A6C1E6;
+    padding: 10px 25px 10px 25px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: #A6C1E6;
+    box-shadow: 2px 3px #c8e3ff; 
+    opacity: 0.8;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 62px;
+}  
+
+.order-form .left, .order-form .right {
+    width: auto;
+}
+
+.dropdown-container {
+    display: flex;
+    gap: 8px;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: column;
+    color: #122138;
+    margin-top: 20px;
+    opacity: 1;
+}
+
+.input-row input[type="text"],
+.input-row input[type="email"] {
+    font-size: 20px;
+    background-color: #A6C1E6;
+    border: none;
+    border-bottom: 2px solid #30415D;
+    padding: 7px;
+    width: 300px;
+    opacity: 1;
+}
+
+.input-row input[type="number"] {
+    font-size: 20px;
+    background-color: #A6C1E6;
+    border: none;
+    border-bottom: 2px solid #30415D;
+    padding: 7px;
+    margin-bottom: 25px;
+    opacity: 1;
+}
+
+.cuisine-payment {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cuisineType-dropdown, .paymentMethod-dropdown {
+    background-color: #30415D;
+    border: 2px solid #30415D;
+    border-radius: 7px;
+    height: fit-content;
+    padding: 10px;
+    width: 162px;
+    color: #f6faff;
+}
+
+.paymentMethod-dropdown{
+    font-size: 18px;
+}
+
+.menu, .payment {
+    background-color: #A6C1E6;
+    border: 2px solid #30415D;
+    width: 162px;
+    height: auto;
+    position: absolute;
+    display: none;
+    border-radius: 7px 7px 0 7px;
+}
+
+.menu ul li, .payment ul li {
+    color: #30415D;
+    padding: 10px;
+    text-align: center;
+}
+.menu ul li:hover, .payment ul li:hover {
+    color: #f6faff;
+    background-color: #30415D;
+    cursor: pointer;
+}
+
+.menu ul li ul, .payment ul li ul{
+    background-color: #A6C1E6;
+    border: 2px solid #30415D;
+    width: 162px;
+    height: auto;
+    position: absolute;
+    display: none;
+    left: 158px;
+    margin-top: -33px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+
+.menu ul li:hover ul, .payment ul li:hover ul {
+    display: block;
+}
+
+.dropdown-cuisine:hover .menu {
+    display: block;
+}
+
+.dropdown-payment:hover .payment {
+    display: block;
+}
+
+.cuisineType-dropdown:hover, .paymentMethod-dropdown:hover{
+    background-color: #A6C1E6;
+    cursor: pointer;
+}
+
+.order-form .right li{
+    list-style: none;
+}
+
+.cuisineType-dropdown:hover , .paymentMethod-dropdown:hover {
+    color: #30415D;
+}
+
+input[type="radio"]:hover {
+    cursor: pointer;
+}
+
+.dineIn-takeOut {
+    background-color: #30415D;
+    border: 2px solid #30415D;
+    border-radius: 7px;
+    margin-top: 5px;
+    height: fit-content;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.comments {
+    display: grid;
+    border: 1px solid #30415D;
+    padding: 5px;
+    border-radius: 7px;
+    margin-top: 5px;
+    background-color: #30415D;
+    color: #f6faff;
+}
+
+textarea {
+    border-radius: 7px;
+    border: 1px solid #30415D;
+}
+
+.dineIn-takeOut {
+    color: #f6faff;
+}
+
+.placeOrder-cancel-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.place-order {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #30415D;
+    border: 2px solid #30415D;
+    color: #f6faff;
+    width: 100px;
+    font-weight: bold;
+}
+
+.place-order:hover {
+    cursor: pointer;
+    background-color: #A6C1E6;
+    color: #30415D;
+}
+
+.cancel {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: rgb(255, 60, 0);
+    border: 2px solid rgb(255, 60, 0);
+    color: #f6faff;
+    width: 100px;
+    font-weight: bold;
+}
+
+.cancel:hover {
+    cursor: pointer;
+    background-color: #f6faff;
+    color: rgb(255, 60, 0);
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(images/mobile-back-image.png);
+        background-repeat: no-repeat;
+    }
+    .payment ul li ul{
+        left: -2px;
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JamesPaul's Gourmet</title>
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="form-header">
+        <div class="form-logo">
+            <img src="images/logo-image.png" alt="" class="web-logo">
+        </div>
+        <div class="form-title-sub-title-basic-info">
+            <h3>JP's Gourmet Order Form</h3>
+            <h5>You Click, We Cook!</h5>
+            <i id="basic-info">JP's Gourmet is a culinary haven where food lovers can</i>
+            <i id="basic-info">embark on a journey of taste sensations from around the globe.</i>
+        </div>
+
+    </header>
+
+    <form action="" class="order-form">
+        <div class="left">
+            <div class="input-row">
+                <label for="fname">First Name:</label>
+                <input type="text" name="fname" id="fname">
+            </div>
+            <div class="input-row">
+                <label for="lname">Last Name:</label>
+                <input type="text" name="lname" id="lname">
+            </div>
+            <div class="input-row">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="input-row">
+                <label for="age">Age:</label>
+                <input type="number" name="age" id="age" min="18" max="99">
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="dropdown-container">
+                <div class="dropdown-cuisine">
+                    <div class="cuisine-payment">
+                        <div class="cuisineType-dropdown">Type of Cuisine
+                        </div>
+                    </div>
+                    <div class="menu-cuisine-container">
+                        <div class="menu">
+                            <ul>
+                                <li><span>Italian</span></li>
+                                <li><span>Chinese</span></li>
+                                <li style="font-size: 18px;"><span>Healthy Options</span>
+                                    <ul>
+                                        <li>Vegan</li>
+                                        <li>Gluten-Free</li>
+                                    </ul>
+                                </li>
+                                <li><span>Mexican</span></li>
+                                <li><span>Specials</span>
+                                    <ul>
+                                        <li>Hotdog</li>
+                                        <li>Itlog</li>
+                                        <li>Binatog</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-payment">
+                    <div class="cuisine-payment">
+                        <div class="paymentMethod-dropdown">Payment Method
+                        </div>
+                    </div>
+                    <div class="payment-container">
+                        <div class="payment">
+                            <ul>
+                                <li><span>Cash</span></li>
+                                <li><span>Paypal</span></li>
+                                <li><span>Gcash</span></li>
+                                <li><span>Maya</span></li>
+                                <li><span>Card</span>
+                                    <ul>
+                                        <li>Debit</li>
+                                        <li>Credit</li>
+                                        <li>Rewards</li>
+                                        <li>Virtual</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dineIn-takeOut">
+                <div class="div"><input type="radio" name="dinein-takeout" id=""> Dine-in</div>
+                <div class="div"><input type="radio" name="dinein-takeout" id=""> Take-out</div>
+            </div>
+
+            <div class="comments">
+                <label for="">Comments/Order Instructions:</label>
+                <textarea name="" id="" cols="30" rows="10"></textarea>
+            </div>
+
+            <div class="placeOrder-cancel-buttons">
+                <button class="cancel">Cancel</button>
+                <button class="place-order">Place Order</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
