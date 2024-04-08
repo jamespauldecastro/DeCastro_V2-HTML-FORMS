@@ -21,7 +21,6 @@
             <i id="basic-info">JP's Gourmet is a culinary haven where food lovers can</i>
             <i id="basic-info">embark on a journey of taste sensations from around the globe.</i>
         </div>
-
     </header>
 
     <form action="" class="order-form">
@@ -45,41 +44,43 @@
         </div>
 
         <div class="right">
-            <div class="dropdown-container">
-                <div class="dropdown-cuisine">
-                    <div class="cuisine-payment">
-                        <div class="cuisineType-dropdown">Type of Cuisine
-                        </div>
+            <div class="dropdowns-container">
+                <div id="dropdown">
+                    <div class="dropdown-toggle">
+                        <span>Type of Cuisine</span>
+                        <i class="fa-solid fa-caret-down" aria-hidden="true"></i>
                     </div>
-                    <div class="menu-cuisine-container">
-                        <div class="menu">
-                            <ul>
-                                <li><span>Italian</span></li>
-                                <li><span>Chinese</span></li>
-                                <li style="font-size: 18px;"><span>Healthy Options</span>
-                                    <ul>
-                                        <li>Vegan</li>
-                                        <li>Gluten-Free</li>
-                                    </ul>
-                                </li>
-                                <li><span>Mexican</span></li>
-                                <li><span>Specials</span>
-                                    <ul>
-                                        <li>Hotdog</li>
-                                        <li>Itlog</li>
-                                        <li>Binatog</li>
-                                    </ul>
-                                </li>
+                    <ul class="menu">
+                        <li class="menu-item"><a href="">Italian</a></li>
+                        <li class="menu-item"><a href="">Chinese</a></li>
+                        <li class="menu-item dropdown"><a href="" class="submenu-toggle">
+                                <span id="healthy-options">Healthy Options</span>
+                                <i class="fa-solid fa-caret-right" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="">Vegan</a></li>
+                                <li class="submenu-item"><a href="">Vegetarian</a></li>
+                                <li class="submenu-item"><a href="">Gluten-Free</a></li>
                             </ul>
-                        </div>
-                    </div>
+                        </li>
+                        <li class="menu-item"><a href="">Mexican</a></li>
+                        <li class="menu-item dropdown">
+                            <a href="" class="submenu-toggle">
+                                <span>Specials</span>
+                                <i class="fa-solid fa-caret-right" aria-hidden="true"></i>
+                            </a>
+                            <ul class="submenu">
+                                <li class="submenu-item"><a href="">Hotdog</a></li>
+                                <li class="submenu-item"><a href="">Itlog</a></li>
+                                <li class="submenu-item"><a href="">Binatog</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
 
                 <div class="dropdown-payment">
-                    <div class="cuisine-payment">
                         <div class="paymentMethod-dropdown">Payment Method
                         </div>
-                    </div>
                     <div class="payment-container">
                         <div class="payment">
                             <ul>
@@ -116,7 +117,10 @@
                 <button class="place-order">Place Order</button>
             </div>
         </div>
+        </div>
     </form>
+
+
 
     <script src="script.js"></script>
 </body>
