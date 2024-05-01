@@ -107,7 +107,7 @@
             padding: 7px;
             width: 300px;
             opacity: 1;
-            color: #ffffff;
+            color: #212529;
         }
 
         .input-row input[type="number"] {
@@ -118,7 +118,7 @@
             padding: 7px;
             margin-bottom: 25px;
             opacity: 1;
-            color: #ffffff;
+            color: #212529;
         }
 
         .dropdowns-container {
@@ -409,6 +409,7 @@
 
 <body>
 
+    <!-- Header -->
     <header class="form-header">
         <div class="form-logo">
             <img src="images/form-logo.png" alt="" class="web-logo">
@@ -421,6 +422,7 @@
         </div>
     </header>
 
+    <!-- Form -->
     <form action="" class="order-form">
         <div class="left">
             <div class="input-row">
@@ -560,8 +562,6 @@
         </div>
     </form>
 
-
-
     <script>
         const dropdownToggle = document.querySelector(".dropdown-toggle");
 
@@ -572,39 +572,39 @@
             dropdownToggle.classList.toggle("open");
         });
 
-        // get the form element.
+        // Get the form element.
         const orderForm = document.querySelector('.order-form');
 
-        // get the input elements.
+        // Get the input elements.
         const firstNameInput = document.getElementById('fname');
         const lastNameInput = document.getElementById('lname');
         const emailInput = document.getElementById('email');
         const ageInput = document.getElementById('age');
 
-        // get the place order and cancel buttons..
+        // Get the place order and cancel buttons..
         const placeOrderButton = document.querySelector('.place-order');
         const cancelButton = document.querySelector('.cancel');
 
-        // function to validate the inputs.
+        // Function to validate the inputs.
         const validateInputs = () => {
             const firstName = firstNameInput.value.trim();
             const lastName = lastNameInput.value.trim();
             const email = emailInput.value.trim();
             const age = ageInput.value;
 
-            // check if any input is empty.
+            // Check if any input is empty.
             if (!firstName || !lastName || !email || !age) {
                 alert('Please fill in all fields');
                 return false;
             }
 
-            // check if age is between 18 and 99.
+            // Check if age is between 18 and 99.
             if (age < 18 || age > 99) {
                 alert('Please enter a valid age between 18 and 99');
                 return false;
             }
 
-            // check if email is valid.
+            // Check if email is valid.
             const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
             if (!email.match(emailRegex)) {
                 alert('Please enter a valid email address');
@@ -614,7 +614,7 @@
             return true;
         };
 
-        // function to clear all inputs.
+        // Function to clear all inputs.
         const clearInputs = () => {
             firstNameInput.value = '';
             lastNameInput.value = '';
@@ -622,7 +622,7 @@
             ageInput.value = '';
         };
 
-        // event listener for place order button.
+        // Event listener for place order button.
         placeOrderButton.addEventListener('click', (e) => {
             e.preventDefault();
 
@@ -631,7 +631,7 @@
             }
         });
 
-        // event listener for cancel button.
+        // Event listener for cancel button.
         cancelButton.addEventListener('click', (e) => {
             e.preventDefault();
 

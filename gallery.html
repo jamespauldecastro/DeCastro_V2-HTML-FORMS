@@ -19,7 +19,6 @@
             top: 0;
             right: 0;
             bottom: 0;
-            width: 300px;
             background-color: #fff;
             z-index: 1000;
             padding: 20px;
@@ -50,10 +49,40 @@
             cursor: pointer;
             color: red;
         }
+
+        .notification {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: fit-content;
+            background-color: #212529;
+            z-index: 1000;
+            overflow-y: auto;
+            height: fit-content;
+            color: #fff;
+            margin-top: 100px;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .quantity-controller {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+        }
     </style>
 </head>
 
 <body>
+
+    <!-- HEADER  -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <div class="container">
             <a href="index.html" class="navbar-brand"><img src="images/LOGO (2).png" alt="" style="height: 4rem;"></a>
@@ -82,6 +111,7 @@
         </div>
     </nav>
 
+    <!-- FULL MENU -->
     <section id="gallery" style="width: 100%; height: fit-content;">
         <div class="container" style="padding-top: 100px;">
             <h1 class="d-flex justify-content-center" style="height: fit-content;">GALLERY</h1>
@@ -95,7 +125,8 @@
                         <p class="card-text">&#8369; 199.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Special Burger"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="199.99" data-image="images/specials/special burgers.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -104,10 +135,12 @@
                     <div class="card-body">
                         <h5 class="card-title">CHICKEN WINGS</h5>
                         <h6>Specials</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 189.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Chicken Wings"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="189.99" data-image="images/specials/special-chicken-wings.jpg"
+                                type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -116,10 +149,12 @@
                     <div class="card-body">
                         <h5 class="card-title">PORK CHOP</h5>
                         <h6>Specials</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 299.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Pork Chop"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="299.99" data-image="images/specials/special-pork-chops.jpg"
+                                type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -128,10 +163,12 @@
                     <div class="card-body">
                         <h5 class="card-title">TOMATO SALAD</h5>
                         <h6>Vegan</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 99.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Tomato Salad"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="99.99" data-image="images/vegan/tomato-mozzarella-salad.jpg"
+                                type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -140,10 +177,11 @@
                     <div class="card-body">
                         <h5 class="card-title">VEGGIE BURGER</h5>
                         <h6>Vegan</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 149.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Veggie Burger"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="149.99" data-image="images/vegan/veggie-burger.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -152,10 +190,11 @@
                     <div class="card-body">
                         <h5 class="card-title">FRUIT PASTA</h5>
                         <h6>Vegan</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 159.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Veggie Burger"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Fruit Pasta"
+                                data-price="159.99" data-image="images/vegan/vegan-fruit-pasta.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -164,10 +203,11 @@
                     <div class="card-body">
                         <h5 class="card-title">BACON BREAD</h5>
                         <h6>Italian</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 89.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Bacon Bread"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="89.99" data-image="images/italian/bacon-bread.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -176,10 +216,11 @@
                     <div class="card-body">
                         <h5 class="card-title">PASTA</h5>
                         <h6>Italian</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 99.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Pasta" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Pasta" data-price="99.99"
+                                data-image="images/italian/pasta.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -188,10 +229,11 @@
                     <div class="card-body">
                         <h5 class="card-title">PIZZETA</h5>
                         <h6>Italian</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 139.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Pizzeta" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Pizzeta" data-price="139.99"
+                                data-image="images/italian/pizzeta.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -200,10 +242,11 @@
                     <div class="card-body">
                         <h5 class="card-title">NOODLE</h5>
                         <h6>Mexican</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 129.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Noodle" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Noodle" data-price="129.99"
+                                data-image="images/mexican/mexican-noodle.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -212,10 +255,11 @@
                     <div class="card-body">
                         <h5 class="card-title">NACHOS</h5>
                         <h6>Mexican</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 109.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Nachos" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Nachos" data-price="109.99"
+                                data-image="images/mexican/nachos.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -224,10 +268,11 @@
                     <div class="card-body">
                         <h5 class="card-title">TACOS</h5>
                         <h6>Mexican</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 119.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Tacos" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Tacos" data-price="119.99"
+                                data-image="images/mexican/tacos.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -236,10 +281,12 @@
                     <div class="card-body">
                         <h5 class="card-title">AVOCADO TOAST</h5>
                         <h6>Gluten Free</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 99.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
                             <button class="btn btn-dark fw-semibold add-to-cart" data-name="Avocado Toast"
-                                data-price="199.99" type="button">ADD TO CART</button>
+                                data-price="99.99" data-image="images/gluten-free/gluten-free-avocado-toast.jpg"
+                                type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -248,10 +295,11 @@
                     <div class="card-body">
                         <h5 class="card-title">CAKE</h5>
                         <h6>Gluten Free</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 149.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Cake" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Cake" data-price="149.99"
+                                data-image="images/gluten-free/gluten-free-cake.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -260,10 +308,11 @@
                     <div class="card-body">
                         <h5 class="card-title">SOUP</h5>
                         <h6>Gluten Free</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 79.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Soup" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Soup" data-price="79.99"
+                                data-image="images/gluten-free/gluten-free-soup.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -272,10 +321,11 @@
                     <div class="card-body">
                         <h5 class="card-title">ICE TEA</h5>
                         <h6>Drinks</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 59.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Ice Tea" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Ice Tea" data-price="59.99"
+                                data-image="images/drinks/ice-tea.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -284,10 +334,11 @@
                     <div class="card-body">
                         <h5 class="card-title">COFFEE</h5>
                         <h6>Drinks</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 69.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Coffee" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Coffee" data-price="69.99"
+                                data-image="images/drinks/coffee.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -296,10 +347,11 @@
                     <div class="card-body">
                         <h5 class="card-title">COKE</h5>
                         <h6>Drinks</h6>
-                        <p class="card-text">&#8369; 199.99</p>
+                        <p class="card-text">&#8369; 49.99</p>
                         <div class="d-grid gap-2 d-md-flex justify-content-center" style="margin-top: 10px;">
-                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Coke" data-price="199.99"
-                                type="button">ADD TO CART</button>
+                            <button class="btn btn-dark fw-semibold add-to-cart" data-name="Coke" data-price="49.99"
+                                data-image="images/drinks/coke.jpg" type="button">ADD
+                                TO CART</button>
                         </div>
                     </div>
                 </div>
@@ -307,6 +359,7 @@
         </div>
     </section>
 
+    <!-- CART CONTAINER  -->
     <div id="sidebar" class="border border-5-dark">
         <button type="button" class="btn-close" aria-label="Close" id="close-sidebar"></button>
         <h2>My Cart</h2>
@@ -323,12 +376,45 @@
         </div>
     </div>
 
-    <footer>
-        <div class="d-flex bg-dark fw-semibold" style="height: 200px; margin-top: 20px; color: white;">
-            <p>About Us</p>
-            <p>Terms and Conditions</p>
-            <p>Feedback</p>
-            <p>Stay Connected</p>
+    <!-- ADD TO CART NOTIFICATION  -->
+    <span id="notification" class="notification">Added to cart</span>
+
+    <!-- FOOTER  -->
+    <footer class="footer" style="margin-top: 50px; background-color: #212529; color: #fff; padding-top: 10px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <p>JP's Gourmet welcomes you where the love for food comes along with culinary talents. We offer
+                        mouth-watering meals and delicacies in the middle of the curious food lover and the adventure
+                        seeker.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Terms and Conditions</h5>
+                    <ul style="text-decoration: none;">
+                        <li style="text-decoration: none;"><a href="terms.html"
+                                style="text-decoration: none; color: #fff;">Terms of Service</a></li>
+                        <li style="text-decoration: none;"><a href="terms.html"
+                                style="text-decoration: none; color: #fff;">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Feedback</h5>
+                    <p>If you have any feedback or suggestions, please let us know!</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Stay Connected</h5>
+                    <ul class="list-inline">
+                        <li><a href="https://web.facebook.com/decastrojp02"
+                                style="text-decoration: none; color: #fff;"><i class="fab fa-facebook"></i> Facebook</a>
+                        </li>
+                        <li><a href="#" style="text-decoration: none; color: #fff"><i class="fab fa-twitter"></i>
+                                Twitter</a></li>
+                        <li><a href="#" style="text-decoration: none; color: #fff"><i class="fab fa-instagram"></i>
+                                Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -339,6 +425,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
+
     <script src="script.js"></script>
 
 </body>
